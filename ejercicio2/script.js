@@ -32,3 +32,4 @@ btnFiltrar.addEventListener("click", () => {
     mostrarLista(resultado);
   }
 });
+mostrarLista(palabras);
