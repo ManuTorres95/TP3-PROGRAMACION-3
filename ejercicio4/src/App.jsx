@@ -22,3 +22,8 @@ function BotonesAlternados() {
     </div>
   );
 }
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<BotonesAlternados />);
+
+export default App
