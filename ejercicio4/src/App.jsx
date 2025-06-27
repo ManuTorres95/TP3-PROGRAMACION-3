@@ -10,14 +10,14 @@ function BotonesAlternados() {
         onClick={() => setHabilitado('derecho')}
         disabled={habilitado !== 'izquierdo'}
       >
-        Izquierdo
+
       </button>
   <button
         onClick={() => setHabilitado('izquierdo')}
         disabled={habilitado !== 'derecho'}
         style={{ marginLeft: '60px' }}
       >
-        Derecho
+
       </button>
     </div>
   );
