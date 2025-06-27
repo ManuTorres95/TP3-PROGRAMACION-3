@@ -10,6 +10,22 @@ function App() {
   return (
     <div style={{ textAlign: 'center', marginTop: '100px' }}>
       <h2>Calculadora de IMC</h2>
+      <input
+  type="number"
+  placeholder="Peso (kg)"
+  value={peso}
+  onChange={(e) => setPeso(e.target.value)}
+/>
+<br /><br />
+
+<input
+  type="number"
+  placeholder="Altura (m)"
+  value={altura}
+  onChange={(e) => setAltura(e.target.value)}
+/>
+<br /><br />
+
     </div>
   );
 }
