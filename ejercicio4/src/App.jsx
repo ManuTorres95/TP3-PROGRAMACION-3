@@ -12,7 +12,13 @@ function BotonesAlternados() {
       >
         Izquierdo
       </button>
-
+  <button
+        onClick={() => setHabilitado('izquierdo')}
+        disabled={habilitado !== 'derecho'}
+        style={{ marginLeft: '60px' }}
+      >
+        Derecho
+      </button>
     </div>
   );
 }
