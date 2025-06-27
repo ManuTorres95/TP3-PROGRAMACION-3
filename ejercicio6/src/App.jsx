@@ -61,7 +61,7 @@ function App() {
 
       {imc && (
         <div style={{ color: color, fontWeight: 'bold' }}>
-          Tu IMC es {imc} - {mensaje}
+           {imc} - {mensaje}
         </div>
       )}
     </div>
