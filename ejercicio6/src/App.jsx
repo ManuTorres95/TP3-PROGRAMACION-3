@@ -58,6 +58,11 @@ function App() {
 
 <button onClick={calcularIMC}>Calcular IMC</button>
 <br /><br />
+{imc && (
+  <div style={{ color: color, fontWeight: 'bold' }}>
+    Tu IMC es {imc} - {mensaje}
+  </div>
+)}
 
 
     </div>
