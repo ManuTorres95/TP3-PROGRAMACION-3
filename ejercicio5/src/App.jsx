@@ -23,3 +23,6 @@ function App() {
 
     setResultado(res);
   };
+
+    const esDivision = operacion === "division";
+}
