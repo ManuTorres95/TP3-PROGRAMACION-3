@@ -26,8 +26,13 @@ function App() {
 />
 <br /><br />
 
+<button onClick={calcularIMC}>Calcular IMC</button>
+<br /><br />
+
+
     </div>
   );
 }
 
 export default App;
+g
