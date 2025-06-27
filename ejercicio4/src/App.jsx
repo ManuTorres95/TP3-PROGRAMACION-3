@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom/client';
 
 function BotonesAlternados() {
   const [habilitado, setHabilitado] = useState('izquierdo');
 
   return (
-    <main style={{ textAlign: 'center', marginTop: '500px' }}>
+    <div style={{ textAlign: 'center', marginTop: '500px' }}>
       <button
         onClick={() => setHabilitado('derecho')}
         disabled={habilitado !== 'izquierdo'}
@@ -12,15 +13,6 @@ function BotonesAlternados() {
         Izquierdo
       </button>
 
-      <button
-        onClick={() => setHabilitado('izquierdo')}
-        disabled={habilitado !== 'derecho'}
-        style={{ marginLeft: '60px' }}
-      >
-        Derecho
-      </button>
-    </main>
+    </div>
   );
 }
-
-export default BotonesAlternados;
