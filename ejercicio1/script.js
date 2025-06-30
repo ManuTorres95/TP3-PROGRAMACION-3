@@ -16,11 +16,13 @@ function verificarDivisionPorCero() {
     calcularBtn.disabled = false;
   }
 }
+operacion.addEventListener("change", verificarDivisionPorCero);
+num2.addEventListener("input", verificarDivisionPorCero);
 
-calcularBtn.addEventListener('click', function () {
-  const valor1 = parseFloat(num1.value);
-  const valor2 = parseFloat(num2.value);
-  let res = '';
+calcularBtn.addEventListener('click', () =>{
+  const n1 = parseFloat(num1.value);
+  const n2 = parseFloat(num2.value);
+  let res = 0 ;
 
   if (operacion.value === "suma") {
     res = n1 + n2;
@@ -32,5 +34,5 @@ calcularBtn.addEventListener('click', function () {
     res = n1 / n2;
   }
 
-  resultado.textContent = res;
+   resultado.textContent = "Resultado: " + res;
 });
