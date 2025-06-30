@@ -10,7 +10,7 @@ function App() {
     const a = parseFloat(num1);
     const b = parseFloat(num2);
     let res = "";
-    
+
 if (operacion === "suma") {
   res = a + b;
 } else if (operacion === "resta") {
@@ -26,6 +26,7 @@ if (operacion === "suma") {
 
     setResultado(res);
   };
+  const deshabilitarDivision = operacion === "division" && parseFloat(num2) === 0;
 
     const esDivision = operacion === "division";
  return (
@@ -57,17 +58,11 @@ if (operacion === "suma") {
 
       <button
         onClick={calcular}
-        disabled={esDivision}
+        disabled={deshabilitarDivision}
         style={{ marginTop: "10px" }}
       >
         Calcular
       </button>
-
-      {esDivision && (
-        <p style={{ color: "red" }}>
-           La operación de división está deshabilitada.
-        </p>
-      )}
 
       {resultado !== null && (
         <p style={{ marginTop: "15px" }}>
