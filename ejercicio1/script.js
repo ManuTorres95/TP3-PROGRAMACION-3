@@ -1,20 +1,25 @@
-const numero1 = document.getElementById('numero1');
-const numero2 = document.getElementById('numero2');
+const num1 = document.getElementById('num1');
+const num2 = document.getElementById('num2');
 const operacion = document.getElementById('operacion');
 const calcularBtn = document.getElementById('calcular');
 const resultado = document.getElementById('resultado');
 
-operacion.addEventListener('change', function () {
-  if (operacion.value === 'dividir') {
+
+function verificarDivisionPorCero() {
+  const op = operacion.value;
+  const n2 = parseFloat(num2.value);
+
+
+  if (op === "division" && n2 === 0) {
     calcularBtn.disabled = true;
   } else {
     calcularBtn.disabled = false;
   }
-});
+}
 
 calcularBtn.addEventListener('click', function () {
-  const valor1 = parseFloat(numero1.value);
-  const valor2 = parseFloat(numero2.value);
+  const valor1 = parseFloat(num1.value);
+  const valor2 = parseFloat(num2.value);
   let res = '';
 
   switch (operacion.value) {
