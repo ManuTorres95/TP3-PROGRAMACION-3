@@ -10,16 +10,19 @@ function App() {
     const a = parseFloat(num1);
     const b = parseFloat(num2);
     let res = "";
+    
+if (operacion === "suma") {
+  res = a + b;
+} else if (operacion === "resta") {
+  res = a - b;
+} else if (operacion === "multiplicacion") {
+  res = a * b;
+} else if (operacion === "division") {
+  res = b !== 0 ? a / b : "Error: división por cero";
+} else {
+  res = "Operación inválida";
+}
 
-    if (operacion === "suma") {
-      res = a + b;
-    } else if (operacion === "resta") {
-      res = a - b;
-    } else if (operacion === "multiplicacion") {
-      res = a * b;
-    } else {
-      res = "Operación inválida";
-    }
 
     setResultado(res);
   };
