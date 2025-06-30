@@ -22,18 +22,14 @@ calcularBtn.addEventListener('click', function () {
   const valor2 = parseFloat(num2.value);
   let res = '';
 
-  switch (operacion.value) {
-    case 'sumar':
-      res = valor1 + valor2;
-      break;
-    case 'restar':
-      res = valor1 - valor2;
-      break;
-    case 'multiplicar':
-      res = valor1 * valor2;
-      break;
-    default:
-      res = 'Operación no válida';
+  if (operacion.value === "suma") {
+    res = n1 + n2;
+  } else if (operacion.value === "resta") {
+    res = n1 - n2;
+  } else if (operacion.value === "multiplicacion") {
+    res = n1 * n2;
+  } else if (operacion.value === "division") {
+    res = n1 / n2;
   }
 
   resultado.textContent = res;
